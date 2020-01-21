@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+             <!--Bootstrap/CSS/JS Library files -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="library.css">
+            <!--Bootstrap/CSS/JS Library files -->
+    <title>Nati Vaknin Library</title>
+</head>
+<body>
+    <h1><span class="yellow">My Books Library</pan></h1>
+        <h2>Created by <a href="https://www.facebook.com/nati.vaknin" target="_blank">Nati vaknin</a></h2>
+       <!-- <div class="row">
+            <div class="col-sm-3">
+              <lable>Search by Author First Name </lable>
+              <input class="Up_Section_Search" type="text" id="author_fname" />
+            </div>
+            <div class="col-sm-3">
+              <lable>Search by Author Last Name </lable>
+              <input class="Up_Section_Search" type="text" id="author_lname" />
+            </div>
+            <div class="col-sm-3">
+              <lable>Search by Author Full Name </lable>
+              <input class="Up_Section_Search" type="text" id="author_fullname" />
+            </div>
+            <div class="col-sm-3">
+              <lable>Search by the Full Book  Title  </lable>
+              <input class="Up_Section_Search" type="text" id="booktitle" />
+            </div>
+          </div>
+          <br/>
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="searchUp()">Serach</button>
+          <br/> -->
+          <div class="row">
+          <div class="col-md-10">
+            <div class="input-group">
+                    <div class="input-group-btn search-panel" data-search="books">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                          <span class="search_by"></span>Search Book By</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a data-search="author_fname">Author Full Name</a></li>
+                          <li><a data-search="author_lname">Author Last Name</a></li>
+                          <li><a data-search="author_fullname">Author Full Name</a></li>
+                          <li><a data-search="booktitle">Book Title</a></li>
+                          <li class="divider"></li>
+                          <li><a data-search="getall"><b>Get All Books</b></a></li>
+                        </ul></div>   
+                    <input type="text" class="form-control" id="searchText" placeholder="Search term...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span></div> </div></div><br>
+          <div class="row">
+            <div class="col-sm-6">
+              <lable>START Year</lable><input class="input-sm form-control" type="text"
+                id="search-year-from" placeholder="YYYY"/>
+            </div>
+            <div class="col-sm-6">
+              <lable>END Year </lable>
+              <input class="input-sm form-control" type="text"  id="search-year-to" placeholder="YYYY" />
+            </div>
+          </div>
+            <br/>
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="serachByYear()">Serach By Years Range</button>
+            <br/>
+            <div class="row">
+            <div class="col-sm-6">
+              <lable>From Price</lable>
+              <input class="input-sm form-control" type="text"id="search-price-from" placeholder="$$$$" />
+            </div>
+            <div class="col-sm-6">
+              <lable>To Price </lable>
+              <input class="input-sm form-control" type="text" id="search-price-to" placeholder="$$$$" />
+            </div>
+            </div>
+            <br>
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="searchByPrice()">Serach By Price Range</button>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table" id="books_table">
+          </table>
+        </div>
+      </div>
+          <!-- Load Local JS file-->
+  <script src="Library_App_Books.js"></script>
+</body>
+</html>
