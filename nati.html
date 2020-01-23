@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+             <!--Bootstrap/CSS/JS Library files -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="library.css">
+            <!--Bootstrap/CSS/JS Library files -->
+    <title>Nati Vaknin Library</title>
+</head>
+<body>
+    <h1><span class="yellow">My Books Library</pan></h1>
+        <h2>Created by <a href="https://www.facebook.com/nati.vaknin" target="_blank">Nati vaknin</a></h2>
+       <div class="row">
+          <div class="col-md-10">
+            <div class="input-group">
+                    <div class="input-group-btn search-panel" data-search="books">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" >
+                          <span id="search_by" class="search_by"></span>Search Book By</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a data-search="author_fname">Author First Name</a></li>
+                          <li><a data-search="author_lname">Author Last Name</a></li>
+                          <li><a data-search="author_fullname">Author Full Name</a></li>
+                          <li><a data-search="booktitle">Book Title</a></li>
+                          <li class="divider"></li>
+                          <li><a data-search="getall"><b>Get All Books</b></a></li>
+                        </ul></div>   
+                    <input type="text" class="form-control" id="searchText" placeholder="Search term...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" onclick="onSearchButtonClick()"><span class="glyphicon glyphicon-search"></span></button>
+                    </span></div> </div></div><br>
+          <div class="row">
+            <div class="col-sm-3">
+              <lable>START Year</lable><input class="input-sm form-control" type="text"
+                id="from_year" placeholder="YYYY"/>
+            </div>
+            <div class="col-sm-3">
+              <lable>END Year </lable>
+              <input class="input-sm form-control" type="text"  id="to_year" placeholder="YYYY" />
+            </div>
+            <div class="col-sm-3">
+              <lable>From Price</lable>
+              <input class="input-sm form-control" type="text"id="from_price" placeholder="$$$$" />
+            </div>
+            <div class="col-sm-3">
+              <lable>To Price </lable>
+              <input class="input-sm form-control" type="text" id="to_price" placeholder="$$$$" />
+              <br/></div>
+            <div class="col-sm-6">
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="searchSelector('Search By Years',1)">Search By Years Range</button>
+          </div>
+            <br/>
+            <div class="col-sm-6">
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="searchSelector('Search By Price',1)">Search By Price Range</button>
+            </div>
+      <div class="row">
+        <div class="col-md-10">
+          <table class="container" id="books_table">
+          </table>
+      </div>
+  <!-- Load Local JS file-->
+  <script src="Library_App_Books.js"></script>
+</body>
+</html>
